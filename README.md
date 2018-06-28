@@ -1,5 +1,5 @@
 # Help_Desk_Helper
-A collection of components for a custom app built using C#. This app leverages multiple forms, independent functions, and custom objects.
+A collection of components for a help desk note-taking app built using C#. This app leverages multiple forms, independent functions, and custom objects.
 
 This repository contains the following two files:
 

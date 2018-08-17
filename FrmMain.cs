@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Evan Brooks
  * Organization: Town of Cary
- * Date: 6/28/2018
+ * Date: 8/17/2018
  */
 
 using System;
@@ -29,6 +29,7 @@ namespace HelpDeskHelper
 
         //Variable to store reference to Incident Form
         private FrmIncident frmIncident;
+        private FrmAbout frmAbout;
 
         /* 
          * ______________________________________________________________________________________________________________________________________________________________
@@ -141,26 +142,40 @@ namespace HelpDeskHelper
             }
         }
 
+        /* 
+         * ______________________________________________________________________________________________________________________________________________________________
+         * Menu Bar Functions
+         * This section contains functions utilized as a direct result of user inputs through the Menu Bar
+         */
+
+        //Summary: instantiates a new About Form object
+        //Usage: opens Help Form
+        private void mbAbout_Click(object sender, EventArgs e)
+        {
+            FrmAbout frmAbout = new FrmAbout();
+            frmAbout.Show();
+        }
+
         //Summary: instantiates a new Help Form object
         //Usage: opens Help Form
-        private void btnHelp_Click(object sender, EventArgs e)
-		{
+        private void mbHelp_Click(object sender, EventArgs e)
+        {
             FrmHelp frmHelp = new FrmHelp();
             frmHelp.Show();
-		}
+        }
 
         //Summary: prompts user to confirm closure of application
-        //Usage: exists application
-        private void btnExit_Click(object sender, EventArgs e)
-		{
-			//Declare variable of DialogResult type and assign messagebox to it
-			DialogResult exit = MessageBox.Show("Exit application?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //Usage: exits application
+        private void mbExit_Click(object sender, EventArgs e)
+        {
+            //Declare variable of DialogResult type and assign messagebox to it
+            DialogResult exit = MessageBox.Show("Exit application?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-			//If user selects 'Yes', close the application (no closes messagebox automatically)
-			if (exit == DialogResult.Yes)
-			{
-				Application.Exit();
-			}
-		}
+            //If user selects 'Yes', close the application (no closes messagebox automatically)
+            if (exit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

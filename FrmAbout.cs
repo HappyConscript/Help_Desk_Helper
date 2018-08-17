@@ -16,16 +16,16 @@ using System.Windows.Forms;
 
 namespace HelpDeskHelper
 {
-    public partial class FrmHelp : Form
+    public partial class FrmAbout : Form
     {
 
         /* 
-        * ______________________________________________________________________________________________________________________________________________________________
-        * Constructor
-        * This section contains a function utilized in the instantiation of this object
-        */
+         * ______________________________________________________________________________________________________________________________________________________________
+         * Constructor
+         * This section contains a function utilized in the instantiation of this object
+         */
 
-        public FrmHelp()
+        public FrmAbout()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace HelpDeskHelper
          * Input Functions
          * This section contains functions utilized as a direct result of user inputs
          */
-        
+
         //Summary: closes object
         //Usage: closes the help form 
         private void btnClose_Click(object sender, EventArgs e)
